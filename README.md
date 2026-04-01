@@ -25,10 +25,8 @@ ai-translator/
 
 ## 🚀 Setup & Run
 
-### Step 1: Get a Gemini API Key (FREE)
-1. Go to https://aistudio.google.com/app/apikey
-2. Click **"Create API key"**
-3. Copy the key
+### Step 1: Get a API Key (FREE)
+
 
 ### Step 2: Add your API key
 Open `backend/.env` and replace:
