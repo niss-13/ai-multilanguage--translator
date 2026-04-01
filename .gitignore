@@ -1,5 +1,6 @@
 # Environment variables - NEVER commit these
 backend/.env
+backend/.env.example
 
 # Python virtual environment
 backend/venv/
