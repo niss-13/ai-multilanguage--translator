@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Translator | Multilanguage Translation Tool</title>
+  <meta name="description"
+    content="AI-powered multilanguage translator using Google Gemini. Translate text across 70+ languages instantly." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-icon">🌐</span>
+        <div>
+          <h1>AI Translator</h1>
+          <p class="logo-sub">Powered by Google Gemini</p>
+        </div>
+      </div>
+      <div class="header-right">
+        <div id="statusBadge" class="status-badge checking">
+          <span class="status-dot"></span>
+          <span id="statusText">Checking...</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="main container">
+
+
+    <!-- Translation Card -->
+    <div class="translator-card">
+
+      <!-- Language Controls -->
+      <div class="lang-controls">
+        <div class="lang-select-wrap">
+          <label for="sourceLang">Source Language</label>
+          <div class="select-with-icon">
+            <select id="sourceLang">
+              <option value="Auto Detect">🔍 Auto Detect</option>
+            </select>
+          </div>
+          <button id="detectBtn" class="detect-btn" title="Detect language from text">
+            🔎 Detect
+          </button>
+        </div>
+
+        <button id="swapBtn" class="swap-btn" title="Swap languages">⇄</button>
+
+        <div class="lang-select-wrap">
+          <label for="targetLang">Target Language</label>
+          <div class="select-with-icon">
+            <select id="targetLang">
+              <!-- Populated by JS -->
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Areas -->
+      <div class="text-areas">
+
+        <!-- Source -->
+        <div class="text-box">
+          <div class="text-box-header">
+            <span>Input Text</span>
+            <div class="text-box-actions">
+              <span id="charCount" class="char-count">0 / 5000</span>
+              <button id="clearBtn" class="icon-btn" title="Clear text">✕</button>
+            </div>
+          </div>
+          <textarea id="sourceText" placeholder="Type or paste your text here..." maxlength="5000" rows="8"></textarea>
+        </div>
+
+        <!-- Arrow -->
+        <div class="arrow-divider">→</div>
+
+        <!-- Target -->
+        <div class="text-box result-box">
+          <div class="text-box-header">
+            <span>Translation</span>
+            <div class="text-box-actions">
+              <button id="copyBtn" class="icon-btn" title="Copy translation" disabled>⎘ Copy</button>
+            </div>
+          </div>
+          <div id="resultArea" class="result-area">
+            <span class="placeholder-text">Translation will appear here...</span>
+          </div>
+          <div id="detectedLangBadge" class="detected-badge hidden"></div>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="actions">
+        <button id="translateBtn" class="translate-btn">
+          <span id="btnText">🌐 Translate</span>
+          <span id="btnSpinner" class="spinner hidden"></span>
+        </button>
+        <p class="hint-text">Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to translate quickly</p>
+      </div>
+
+    </div>
+
+    <!-- Error Box -->
+    <div id="errorBox" class="error-box hidden">
+      <span>⚠️ </span><span id="errorMessage"></span>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Powered</h3>
+          <p>Uses Google Gemini GenAI for accurate, context-aware translations</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h3>70+ Languages</h3>
+          <p>Supports over 70 world languages including Asian, European, and African languages</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Auto Detection</h3>
+          <p>Automatically detects the source language of your text</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast Results</h3>
+          <p>Get instant translations powered by Gemini Flash model</p>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
