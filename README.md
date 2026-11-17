@@ -95,7 +95,7 @@ curl -X POST http://localhost:5000/api/translate \
 
 ---
 
-## 🛠 Tech Stack
+🛠 Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -105,10 +105,9 @@ curl -X POST http://localhost:5000/api/translate \
 | **API** | RESTful JSON API |
 
 ---
-
-## 📋 College Project Info
+📋 College Project Info
 
 - **Subject**: Artificial Intelligence / Web Development
 - **Purpose**: Demonstrates GenAI API integration with a full-stack web app
 - **AI Model Used**: Google Gemini 1.5 Flash (free tier available)
-- **No paid subscriptions required** (Gemini has a free quota)
+
